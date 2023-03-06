@@ -25,7 +25,8 @@ table_rows = cur.fetchall()
 df = pd.DataFrame(table_rows)
 
 for y in df.loc[2]:
-    df[2] = df[2].replace([1,2,3,4,5,6,7],["Leid","Castilho","Loja","Site","Samuel", "Chico", "Zefs"])
+    df[2] = df[2].replace([1,2,3,4,5,6,7,12],["Leid","Castilho","Loja","Site","Samuel", "Chico", "Zefs",
+                                              "Michele"])
 
 
 for x in df.loc[3]:
@@ -52,7 +53,6 @@ m = pd.merge(dft,dfx, how='inner', on='COD CLIENTE')
 m = m.sort_values(by=['FORMA PAGAMENTO','VENDEDOR','DATA VENCIMENTO'])
 m = m.drop(columns=('COD CLIENTE'))
 
-print(m.head(10))
 
 def clicar():
     m.to_excel(excel_path, index=False)
