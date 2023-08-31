@@ -25,8 +25,8 @@ table_rows = cur.fetchall()
 df = pd.DataFrame(table_rows)
 
 for y in df.loc[2]:
-    df[2] = df[2].replace([1,2,3,4,5,6,7,12],["Leid","Castilho","Loja","Site","Samuel", "Chico", "Zefs",
-                                              "Michele"])
+    df[2] = df[2].replace([1,2,3,4,5,6,7,12,14,15],["Leid","Castilho","Loja","Site","Samuel", "Chico", "Zefs",
+                                              "Michele", "Isabelly", "Alicia"])
 
 
 for x in df.loc[3]:
